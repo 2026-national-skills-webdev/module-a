@@ -1,0 +1,17 @@
+* {margin: 0;padding: 0;list-style: none;text-decoration: none;box-sizing: border-box;color: inherit;}
+
+body {padding: 25px;}
+
+.calender {width: 500px;padding: 10px;border: 1px solid #00000026;border-radius: 15px;margin: 0 auto;}
+.group-1 {display: flex;justify-content: space-between;align-items: center;}
+.button {padding: 5px 10px;border-radius: 5px;background: #00000005;border: 1px solid #00000026;font-size: 14px;cursor: pointer;}
+.text-1 {font-weight: bold;}
+.table {margin-top: 10px;}
+.thead {display: grid;grid-template-columns: repeat(7, 1fr);gap: 10px;text-align: center;}
+.thead div {padding: 10px;}
+.tbody {display: grid;grid-template-columns: repeat(7, 1fr);gap: 10px;text-align: center;}
+.tbody div {padding: 10px;text-align: center;height: 50px;border-radius: 5px;}
+.tbody div.day {border: 1px solid #00000026;background: #00000005;}
+.tbody div.day:nth-child(7n + 1) {color: red;}
+.tbody div.day:nth-child(7n) {color: blue;}
+.tbody div.today {font-weight: bold;background: #00000010;}
