@@ -1,0 +1,6 @@
+* {margin: 0;padding: 0;list-style: none;text-decoration: none;box-sizing: border-box;color: inherit;}
+
+body {display: flex;flex-direction: column;gap: 10px;padding: 10px;}
+
+canvas {width: 500px;height: 250px;border: 1px solid #00000026;}
+.group {display: flex;gap: 10px;}
