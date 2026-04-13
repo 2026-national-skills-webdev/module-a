@@ -1,0 +1,16 @@
+* {margin: 0;padding: 0;list-style: none;text-decoration: none;box-sizing: border-box;color: inherit;user-select: none;}
+
+body {padding: 10px;}
+.calendar {width: 500px;}
+.group-1 {display: flex;justify-content: space-between;align-items: center;}
+.button {padding: 5px 10px;border-radius: 5px;border: 1px solid #00000026;cursor: pointer;font-size: 14px;}
+.text-1 {font-size: 14px;}
+.table {margin-top: 10px;}
+.thead {display: grid;grid-template-columns: repeat(7, 1fr);gap: 10px;}
+.thead div {padding: 5px;text-align: center;font-size: 14px;}
+.tbody {display: grid;grid-template-columns: repeat(7, 1fr);gap: 10px;margin-top: 10px;}
+.tbody div {padding: 5px;text-align: center;font-size: 14px;color: #00000099;border-radius: 5px;}
+.tbody div.day {border: 1px solid #00000026;}
+.tbody div:nth-child(7n + 1) {color: red;}
+.tbody div:nth-child(7n) {color: blue;}
+.tbody div.today {background: blue;color: #fff;}
