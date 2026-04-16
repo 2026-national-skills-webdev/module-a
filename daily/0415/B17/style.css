@@ -1,0 +1,5 @@
+* {margin: 0;padding: 0;list-style: none;text-decoration: none;box-sizing: border-box;color: inherit;}
+
+label {display: flex;justify-content: center;align-items: center;width: 500px;height: 250px;border: 1px dotted #00000026;font-size: 14px;color: #00000099;margin-top: 10px;}
+ul {display: flex;flex-direction: column;gap: 10px;width: 500px;margin-top: 10px;}
+li {width: 100%;padding: 10px;border: 1px solid #00000026;}
