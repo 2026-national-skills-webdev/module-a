@@ -1,0 +1,11 @@
+* {margin: 0;padding: 0;list-style: none;text-decoration: none;box-sizing: border-box;color: inherit;}
+
+.calendar {width: 500px;padding: 10px;border: 1px solid #00000026;border-radius: 5px;margin: 50px auto;}
+.controls {display: flex;justify-content: space-between;align-items: center;padding-bottom: 10px;border-bottom: 1px solid #00000026;margin-bottom: 5px;}
+.controls .button {padding: 5px 10px;border: 1px solid #00000026;font-size: 14px;cursor: pointer;}
+.controls .text-1 {font-size: 14px;}
+.thead, .tbody {display: grid;grid-template-columns: repeat(7, 1fr);gap: 5px;}
+.thead div {padding: 10px 5px;font-size: 14px;text-align: center;}
+.tbody div {padding: 5px;aspect-ratio: 1;font-size: 14px;color: #00000099;}
+.tbody .day {border: 1px solid #00000026;}
+.tbody .today {background: blue;color: #fff;}
