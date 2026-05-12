@@ -1,0 +1,94 @@
+* {margin: 0;padding: 0;list-style: none;text-decoration: none;box-sizing: border-box;color: inherit;}
+
+body {display: flex;justify-content: center;align-items: center;min-height: 100vh;}
+
+.book {position: relative;display: flex;width: 1000px;height: 750px;perspective: 3000px;border: 1px solid #000000;}
+.book > .page {flex: 1;}
+.book .sheet {position: absolute;left: 50%;top: 0;display: grid;width: 50%;height: 100%;transform-origin: 0;transform-style: preserve-3d;animation-duration: 1s;animation-fill-mode: forwards;}
+.book .sheet .page {width: 100%;height: 100%;grid-column: 1;grid-row: 1;backface-visibility: hidden;}
+.book .sheet .page-2 {transform: rotateY(180deg);}
+.book .page-1 {background: #4f4;}
+.book .page-2 {background: #f44;}
+
+label, input {display: none;}
+
+.controls {position: fixed;left: 50%;top: 50%;display: flex;gap: 25px;transform: translate(-50%, -50%);}
+.controls label {padding: 10px;border: 1px solid #000000;cursor: pointer;background: #fff;}
+
+#p1l:checked ~ .controls label[for="p4l"],
+#p1l:checked ~ .controls label[for="p1r"],
+#p1r:checked ~ .controls label[for="p1l"],
+#p1r:checked ~ .controls label[for="p2r"],
+#p2r:checked ~ .controls label[for="p2l"],
+#p2r:checked ~ .controls label[for="p3r"],
+#p3r:checked ~ .controls label[for="p3l"],
+#p3r:checked ~ .controls label[for="p4r"],
+#p4r:checked ~ .controls label[for="p4l"],
+#p4r:checked ~ .controls label[for="p1r"],
+#p2l:checked ~ .controls label[for="p1l"],
+#p2l:checked ~ .controls label[for="p2r"],
+#p3l:checked ~ .controls label[for="p2l"],
+#p3l:checked ~ .controls label[for="p3r"],
+#p4l:checked ~ .controls label[for="p3l"],
+#p4l:checked ~ .controls label[for="p4r"]
+{display: block;}
+
+#p1l:checked ~ .book .sheet {animation-name: l1;}
+#p1r:checked ~ .book .sheet {animation-name: r1;}
+#p2l:checked ~ .book .sheet {animation-name: l2;}
+#p2r:checked ~ .book .sheet {animation-name: r2;}
+#p3l:checked ~ .book .sheet {animation-name: l3;}
+#p3r:checked ~ .book .sheet {animation-name: r3;}
+#p4l:checked ~ .book .sheet {animation-name: l4;}
+#p4r:checked ~ .book .sheet {animation-name: r4;}
+
+#p2l:checked ~ .book .page-1 {background: #f44;}
+#p2l:checked ~ .book .page-2 {background: #ff4;}
+
+#p2r:checked ~ .book .page-1 {background: #f44;}
+#p2r:checked ~ .book .page-2 {background: #ff4;}
+
+#p3l:checked ~ .book .page-1 {background: #ff4;}
+#p3l:checked ~ .book .page-2 {background: #44f;}
+
+#p3r:checked ~ .book .page-1 {background: #ff4;}
+#p3r:checked ~ .book .page-2 {background: #44f;}
+
+#p4l:checked ~ .book .page-1 {background: #44f;}
+#p4l:checked ~ .book .page-2 {background: #4f4;}
+
+#p4r:checked ~ .book .page-1 {background: #44f;}
+#p4r:checked ~ .book .page-2 {background: #4f4;}
+
+@keyframes l1 {
+    from {transform: rotateY(-180deg);}
+    to {transform: rotateY(0);}
+}
+@keyframes r1 {
+    from {transform: rotateY(0);}
+    to {transform: rotateY(-180deg);}
+}
+@keyframes l2 {
+    from {transform: rotateY(-180deg);}
+    to {transform: rotateY(0);}
+}
+@keyframes r2 {
+    from {transform: rotateY(0);}
+    to {transform: rotateY(-180deg);}
+}
+@keyframes l3 {
+    from {transform: rotateY(-180deg);}
+    to {transform: rotateY(0);}
+}
+@keyframes r3 {
+    from {transform: rotateY(0);}
+    to {transform: rotateY(-180deg);}
+}
+@keyframes l4 {
+    from {transform: rotateY(-180deg);}
+    to {transform: rotateY(0);}
+}
+@keyframes r4 {
+    from {transform: rotateY(0);}
+    to {transform: rotateY(-180deg);}
+}
