@@ -1,0 +1,10 @@
+* {margin: 0;padding: 0;list-style: none;text-decoration: none;box-sizing: border-box;color: inherit;}
+
+body {display: flex;flex-direction: column;align-items: center;gap: 25px;}
+
+.thead, .tbody {display: grid;grid-template-columns: repeat(7, 50px);}
+.week {text-align: center;}
+.day {text-align: center;}
+.day:nth-child(7n), .week:nth-child(7n) {color: blue;}
+.day:nth-child(7n + 1), .week:nth-child(7n + 1) {color: red;}
+.container {display: flex;gap: 10px;}
