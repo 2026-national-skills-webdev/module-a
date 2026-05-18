@@ -1,0 +1,11 @@
+* {margin: 0;padding: 0;list-style: none;text-decoration: none;box-sizing: border-box;color: inherit;}
+
+body {display: flex;justify-content: center;align-items: center;min-height: 100vh;}
+
+.container {display: flex;gap: 25px;}
+.card-cover {perspective: 500px;}
+.card {display: grid;width: 100px;aspect-ratio: 3 / 4;transform-style: preserve-3d;transition: .25s;}
+.card div {grid-row: 1;grid-column: 1;display: flex;justify-content: center;align-items: center;width: 100%;height: 100%;color: #fff;}
+.front {background: red;}
+.back {background: blue;transform: rotateY(-180deg);backface-visibility: hidden;}
+.card-cover:hover .card {transform: rotateY(180deg);}
